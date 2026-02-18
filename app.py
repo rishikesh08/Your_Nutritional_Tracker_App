@@ -8,7 +8,7 @@ from PIL import Image
 genai.configure(api_key='AIzaSyC8pcFPbGtHBRTEnwSVxzcDVgkA5qX6N50')
 
 def get_gemini_response(input_prompt,image):
-    model=genai.GenerativeModel('gemini-1.5-flash')
+    model=genai.GenerativeModel('gemini-3-pro-preview')
     response=model.generate_content([input_prompt,image[0]]);
     return response.text
 
@@ -56,4 +56,5 @@ if submit:
     response=get_gemini_response(input_prompt,image_data)
     st.header("The Nutritional and Calorie contents are ")
     st.write(response)
+
 
