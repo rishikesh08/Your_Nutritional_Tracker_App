@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()  
 from PIL import Image
 
-genai.configure(api_key='AIzaSyAtdirs2MXnMC2Dm985ZKuja51_oOlc80g')
+genai.configure(api_key='AIzaSyC8pcFPbGtHBRTEnwSVxzcDVgkA5qX6N50')
 
 def get_gemini_response(input_prompt,image):
     model=genai.GenerativeModel('gemini-1.5-flash')
@@ -56,3 +56,4 @@ if submit:
     response=get_gemini_response(input_prompt,image_data)
     st.header("The Nutritional and Calorie contents are ")
     st.write(response)
+
